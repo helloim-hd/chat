@@ -1,28 +1,26 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
-import VueSocketIO from 'vue-socket.io';
-import { store } from './store';
 
-// createApp(App).mount('#app');
-Vue.use(
-  new VueSocketIO({
-    debug: true,
-    connection: SocketIO('http://localhost:5000', options), //options object is Optional
-    vuex: {
-      store,
-      actionPrefix: 'SOCKET_',
-      mutationPrefix: 'SOCKET_',
-    },
-  })
-);
+createApp(App).mount('#app');
+// Vue.use(
+//   new VueSocketIO({
+//     debug: true,
+//     connection: SocketIO('http://localhost:5000', options), //options object is Optional
+//     vuex: {
+//       store,
+//       actionPrefix: 'SOCKET_',
+//       mutationPrefix: 'SOCKET_',
+//     },
+//   })
+// );
 
-// Vue.use(VueSocketIO, 'http://localhost:5000');
-Vue.use(socketIO, 'http://localhost:5000');
-Vue.use(require('vue-moment'));
+// // Vue.use(VueSocketIO, 'http://localhost:5000');
+// Vue.use(socketIO, 'http://localhost:5000');
+// Vue.use(require('vue-moment'));
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount('#app');
+// new Vue({
+//   router,
+//   store,
+//   render: (h) => h(App),
+// }).$mount('#app');

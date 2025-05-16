@@ -3,14 +3,17 @@ import HelloWorld from './components/HelloWorld.vue';
 import MessageBox from './components/MessageBox.vue';
 import SenderMessage from './components/SenderMessage.vue';
 import Handle from './components/Handle.vue';
+import Test from './components/Test.vue';
+import ConnectionManager from './components/ConnectionManager.vue';
+import ConnectionState from './components/ConnectionState.vue';
 import './style.css';
 </script>
 
 <template>
   <div>
-    <Handle />
-    <SenderMessage />
-    <MessageBox />
+    <Test />
+    <ConnectionManager />
+    <ConnectionState />
   </div>
 </template>
 
